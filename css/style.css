@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6, .subtitle, .main-heading, .logo-text {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid #DCDCDC;
 }
 
 .logo {
@@ -62,58 +62,47 @@ h1, h2, h3, h4, h5, h6, .subtitle, .main-heading, .logo-text {
 }
 
 /* Language Dropdown Styles */
-.language-select {
+language-selector {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .globe-icon {
+    color: #8DB0FF;
+    margin-right: 5px;
+  }
+  
+  .language-dropdown {
     position: relative;
-    display: flex;
-    align-items: center;
+    display: inline-block;
     margin-right: 20px;
-    cursor: pointer;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.language-select .globe-icon {
-    margin-right: 8px;
-}
-
-.language-select .selected-lang {
-    display: flex;
-    align-items: center;
-}
-
-.language-select .chevron {
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-    font-size: 10px;
-}
-
-.language-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    border: 1px solid #eaeaea;
-    border-radius: 4px;
-    width: 160px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .dropdown-content {
     display: none;
-    z-index: 100;
-    margin-top: 10px;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.language-select:hover .language-dropdown {
-    display: block;
-}
-
-.language-dropdown li {
-    list-style: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.language-dropdown li:hover {
+    position: absolute;
     background-color: #f9f9f9;
-}
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .language-dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 .auth-buttons {
     display: flex;
@@ -148,6 +137,79 @@ h1, h2, h3, h4, h5, h6, .subtitle, .main-heading, .logo-text {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .nav-links {
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-menu-btn {
+      display: block;
+    }
+    
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
+      gap: 0;
+      transform: translateY(-150%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 999;
+    }
+    
+    .nav-links.active {
+      transform: translateY(0);
+    }
+    
+    .nav-links li {
+      width: 100%;
+    }
+    
+    .nav-links a {
+      display: block;
+      padding: 1rem 1.5rem;
+    }
+    
+    .nav-links a:hover::after {
+      display: none;
+    }
+    
+    .right-section {
+      gap: 0.75rem;
+    }
+    
+    .language-select .selected-lang span:not(.globe-icon) {
+      display: none;
+    }
+    
+    .auth-buttons .sign-in {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-text {
+      font-size: 1.25rem;
+    }
+    
+    .auth-buttons .start-llc {
+      padding: 0.5rem;
+      font-size: 0.875rem;
+    }
+    a.btn.btn-primary{
+        font-size: 13px;
+    }
+    a.btn.btn-secondary{
+        font-size: 13px;
+    }
+  }
 /* Hero Section */
 
   
@@ -588,7 +650,7 @@ h1, h2, h3, h4, h5, h6, .subtitle, .main-heading, .logo-text {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 580px;
+    height: 637px;
 
 }
 
@@ -634,7 +696,7 @@ h1, h2, h3, h4, h5, h6, .subtitle, .main-heading, .logo-text {
 .step-card {
     background: white;
     border-radius: 8px;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -719,6 +781,7 @@ h1, h2, h3, h4, h5, h6, .subtitle, .main-heading, .logo-text {
 }
 
 /* why choose tartoro */
+
 .whychoosetartoro {
     margin: 0 auto;
     padding: 60px 150px;
@@ -843,6 +906,7 @@ h1, h2, h3, h4, h5, h6, .subtitle, .main-heading, .logo-text {
     }
 }
 
+
 /* pricing plans */
 li.feature-item {
     margin-bottom: 11px;
@@ -894,6 +958,9 @@ h1 {
     border: 1px solid #eaeaea;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .dots-pattern {
@@ -929,7 +996,7 @@ h1 {
 
 .separator {
     height: 1px;
-    background-color: #eaeaea;
+    background-color: #DCDCDC;
     margin: 1.5rem 0;
 }
 .feature-title1 {
@@ -939,13 +1006,16 @@ h1 {
     color: #1a1a2e;
 }
 .feature-list {
-    list-style: none;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    margin-bottom: 20px;
 }
 
 .feature-item {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 10px;
 }
 
 .feature-icon {
@@ -957,7 +1027,7 @@ h1 {
 }
 
 .feature-title1 {
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.25rem;
 }
 
@@ -1073,7 +1143,7 @@ h1 {
 
 .card-body h3 {
     color: #2d3748;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 18px;
 }
 
