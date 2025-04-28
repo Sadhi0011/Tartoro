@@ -1365,3 +1365,28 @@ footer {
     opacity: 0.3;
     transform: translate(50%, -50%);
 }
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.goog-logo-link,
+.goog-te-gadget {
+  display: none !important;
+}
+.skiptranslate {
+  display: none;
+}
+/* Hide the Google Translate tooltip */
+.goog-tooltip, 
+.goog-tooltip:hover {
+    display: none !important;
+}
+
+/* Hide the 'Original text' popup */
+.goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+}
+

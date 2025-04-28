@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <title>Tartoro - Start Your Business Fast</title>
     <!-- Import Google Fonts: Nunito Sans and Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +13,12 @@
     <!-- icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <!-- how itworks icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body >
+    <div id="google_translate_element" style="display: none;"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
@@ -30,19 +32,17 @@
             <li><a href="#helpgulguides">Helpful Guides</a></li>
             <li><a href="#pricing">Pricing</a></li>
         </ul>
-        
         <div class="right-section">
-            <div class="language-dropdown">
+            <div class="language-dropdown notranslate">
                 <div class="language-selector">
-                  <span class="globe-icon">🌐</span>
-                  <span id="selected-language">English</span> ▼
+                    <span class="globe-icon">🌐</span>
+                    <span id="selected-language">Spanish</span> ▼
                 </div>
                 <div class="dropdown-content">
-                  <a href="#" onclick="changeLanguage('en')">English</a>
-                  <a href="#" onclick="changeLanguage('es')">Español</a>
-                </div>
-              </div>
-            
+                    <a href="#" id="lang-es" onclick="changeLanguage('es')">spanish</a>
+                    <a href="#" id="lang-en" onclick="changeLanguage('en')">English</a>
+                </div>                  
+            </div>
             <div class="auth-buttons">
                 <button class="sign-in">Sign In</button>
                 <button class="start-llc">Start LLC</button>
@@ -730,5 +730,44 @@
       }
     }
   </script>
+
+  <!-- language change script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" 
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+<script>
+    function changeLanguage(lang) {
+        var select = document.querySelector(".goog-te-combo");
+        if (select) {
+            select.value = lang;
+            select.dispatchEvent(new Event('change'));
+        }
+    
+        // Update the text on the button (optional)
+        document.getElementById('selected-language').innerText = lang === 'es' ? 'Spanish' : 'English';
+    }
+    </script>
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    setInterval(function() {
+        const googElements = document.querySelectorAll('[title="Original text"]');
+        googElements.forEach(function(el) {
+            el.removeAttribute('title');
+        });
+    }, 1000); // check every second
+});
+</script>
+
+
 </body>
 </html>
