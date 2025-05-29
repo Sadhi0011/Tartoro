@@ -19,6 +19,9 @@
         .auth-buttons a {
             text-decoration: none;
         }
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
@@ -30,10 +33,10 @@
         </div>
         
         <ul class="nav-links">
-            <li><a href="#whytartoro">Why Tartoro?</a></li>
-            <li><a href="#howitworks">How it Works</a></li>
-            <li><a href="#helpgulguides">Helpful Guides</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#whytartoro" data-en="Why Tartoro?" data-es="¿Por qué Tartoro?">Why Tartoro?</a></li>
+            <li><a href="#howitworks" data-en="How it Works" data-es="Cómo Funciona">How it Works</a></li>
+            <li><a href="#helpgulguides" data-en="Helpful Guides" data-es="Guías Útiles">Helpful Guides</a></li>
+            <li><a href="#pricing" data-en="Pricing" data-es="Precios">Pricing</a></li>
         </ul>
         
         <div class="right-section">
@@ -43,14 +46,14 @@
                   <span id="selected-language">English</span> ▼
                 </div>
                 <div class="dropdown-content">
-                  <a href="#" onclick="changeLanguage('en')">English</a>
-                  <a href="#" onclick="changeLanguage('es')">Español</a>
+                  <a href="#" onclick="switchLanguage('en'); document.getElementById('selected-language').textContent='English'; return false;">English</a>
+                  <a href="#" onclick="switchLanguage('es'); document.getElementById('selected-language').textContent='Español'; return false;">Español</a>
                 </div>
               </div>
             
             <div class="auth-buttons">
-                <a href="https://tartoro.d3e.studio/customer-signin" class="sign-in">Sign In</a>
-                <a href="https://tartoro.d3e.studio/business-setup" class="start-llc">Start LLC</a>
+                <a href="https://tartoro.d3e.studio/customer-signin" class="sign-in" data-en="Sign In" data-es="Iniciar Sesión">Sign In</a>
+                <a href="https://tartoro.d3e.studio/business-setup" class="start-llc" data-en="Start LLC" data-es="Crear LLC">Start LLC</a>
             </div>
         </div>
     </nav>
@@ -59,16 +62,25 @@
     <div class="banner-container">
         <div class="banner-content">
           <div class="text-section">
-            <div class="subtitle">LET'S START YOUR BUSINESS</div>
-            <h1 class="main-title">Start your business <span>fast</span> with <span>Tartoro.</span></h1>
+            <div class="subtitle" data-en="LET'S START YOUR BUSINESS" data-es="COMENCEMOS TU NEGOCIO">LET'S START YOUR BUSINESS</div>
+            <h1 class="main-title">
+                <span data-en="Start your business " data-es="Inicia tu negocio ">Start your business </span>
+                <span data-en="fast" data-es="rápido">fast</span>
+                <span data-en=" with " data-es=" con "> with </span>
+                <span>Tartoro.</span>
+            </h1>
             <p class="description">
-              We are over <strong>65 million strong</strong> — building businesses, creating jobs, and driving the economy forward. But the system wasn't built with us in mind. Tartoro makes it <span class="highlight">easy, accessible, and affordable</span> to start and grow your business, with end-to-end support.
+              <span data-en="We are over " data-es="Somos más de ">We are over </span>
+              <strong data-en="65 million strong" data-es="65 millones">65 million strong</strong>
+              <span data-en=" — building businesses, creating jobs, and driving the economy forward. But the system wasn't built with us in mind. Tartoro makes it " data-es=" — construyendo negocios, creando empleos e impulsando la economía. Pero el sistema no fue diseñado pensando en nosotros. Tartoro lo hace "> — building businesses, creating jobs, and driving the economy forward. But the system wasn't built with us in mind. Tartoro makes it </span>
+              <span class="highlight" data-en="easy, accessible, and affordable" data-es="fácil, accesible y económico">easy, accessible, and affordable</span>
+              <span data-en=" to start and grow your business, with end-to-end support." data-es=" iniciar y hacer crecer tu negocio, con soporte integral."> to start and grow your business, with end-to-end support.</span>
             </p>
             <div class="button-group">
-              <a href="https://tartoro.d3e.studio/business-setup" class="btn btn-primary">
+              <a href="https://tartoro.d3e.studio/business-setup" class="btn btn-primary" data-en="Start Your LLC Now" data-es="Crea tu LLC Ahora">
                 Start Your LLC Now
               </a>
-              <a href="https://tartoro.d3e.studio/agent/login" class="btn btn-secondary">
+              <a href="https://tartoro.d3e.studio/agent/login" class="btn btn-secondary" data-en="Get a Registered Agent" data-es="Obtener un Agente Registrado">
                 Get a Registered Agent
               </a>
             </div>
@@ -80,15 +92,15 @@
             <div class="stat-badge">
               <div class="stat-icon">📈</div>
               <div class="stat-text">
-                <strong>5/5 Rating</strong>
-                From 10,000+ customers
+                <strong data-en="5/5 Rating" data-es="Calificación 5/5">5/5 Rating</strong>
+                <span data-en="From 10,000+ customers" data-es="De más de 10,000 clientes">From 10,000+ customers</span>
               </div>
             </div>
             
             <div class="floating-element testimonial">
               <div class="avatar">S</div>
               <div>
-                <p class="quote">"Tartoro simplified everything for my startup. Best decision I made!"</p>
+                <p class="quote" data-en=""Tartoro simplified everything for my startup. Best decision I made!"" data-es=""Tartoro simplificó todo para mi startup. ¡La mejor decisión que tomé!"">"Tartoro simplified everything for my startup. Best decision I made!"</p>
                 <p class="quote-author">- Sarah K.</p>
               </div>
             </div>
@@ -100,13 +112,13 @@
  <div class="tartorohelp">
     <div class="container">
         <div class="heading">
-          <h2 class="section-title">How Can Tartoro Help You?</h2>
-          <p class="section-subtitle">We are Latino entrepreneurs, workers, and dreamers—over 65 million strong in the U.S., building businesses, creating jobs, and driving the economy forward.</p>
+          <h2 class="section-title" data-en="How Can Tartoro Help You?" data-es="¿Cómo Puede Ayudarte Tartoro?">How Can Tartoro Help You?</h2>
+          <p class="section-subtitle" data-en="We are Latino entrepreneurs, workers, and dreamers—over 65 million strong in the U.S., building businesses, creating jobs, and driving the economy forward." data-es="Somos emprendedores, trabajadores y soñadores latinos—más de 65 millones en los EE.UU., construyendo negocios, creando empleos e impulsando la economía.">We are Latino entrepreneurs, workers, and dreamers—over 65 million strong in the U.S., building businesses, creating jobs, and driving the economy forward.</p>
         </div>
         <div class="services-container">
           <div class="service-card">
             <div class="service-header">
-              <h2>Start Your LLC</h2>
+              <h2 data-en="Start Your LLC" data-es="Crea tu LLC">Start Your LLC</h2>
             </div>
             <div class="service-features">
               <div class="feature-item">
@@ -116,8 +128,8 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Let's Get to Know You</h3>
-                  <p>Tell us about your business idea and goals</p>
+                  <h3 data-en="Let's Get to Know You" data-es="Conozcámonos">Let's Get to Know You</h3>
+                  <p data-en="Tell us about your business idea and goals" data-es="Cuéntanos sobre tu idea de negocio y objetivos">Tell us about your business idea and goals</p>
                 </div>
               </div>
               <div class="feature-item">
@@ -127,8 +139,8 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Personalized Recommendations</h3>
-                  <p>Get tailored options based on your needs</p>
+                  <h3 data-en="Personalized Recommendations" data-es="Recomendaciones Personalizadas">Personalized Recommendations</h3>
+                  <p data-en="Get tailored options based on your needs" data-es="Obtén opciones personalizadas según tus necesidades">Get tailored options based on your needs</p>
                 </div>
               </div>
               <div class="feature-item">
@@ -138,8 +150,8 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Choose Your Plan</h3>
-                  <p>Select the right setup for your business</p>
+                  <h3 data-en="Choose Your Plan" data-es="Elige tu Plan">Choose Your Plan</h3>
+                  <p data-en="Select the right setup for your business" data-es="Selecciona la configuración adecuada para tu negocio">Select the right setup for your business</p>
                 </div>
               </div>
               <div class="feature-item">
@@ -149,8 +161,8 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Simple Application</h3>
-                  <p>Complete your forms with guided support</p>
+                  <h3 data-en="Simple Application" data-es="Solicitud Simple">Simple Application</h3>
+                  <p data-en="Complete your forms with guided support" data-es="Completa tus formularios con soporte guiado">Complete your forms with guided support</p>
                 </div>
               </div>
               <div class="feature-item">
@@ -160,19 +172,19 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Free Filing</h3>
-                  <p>We process your application at no cost</p>
+                  <h3 data-en="Free Filing" data-es="Registro Gratuito">Free Filing</h3>
+                  <p data-en="We process your application at no cost" data-es="Procesamos tu solicitud sin costo">We process your application at no cost</p>
                 </div>
               </div>
             </div>
             <div class="service-cta">
-              <a href="https://tartoro.d3e.studio/business-setup" class="cta-button pulse">Start Your LLC Now</a>
+              <a href="https://tartoro.d3e.studio/business-setup" class="cta-button pulse" data-en="Start Your LLC Now" data-es="Crea tu LLC Ahora">Start Your LLC Now</a>
             </div>
           </div>
           
           <div class="service-card">
             <div class="service-header">
-              <h2>Have One or More Businesses?</h2>
+              <h2 data-en="Have One or More Businesses?" data-es="¿Tienes Uno o Más Negocios?">Have One or More Businesses?</h2>
             </div>
             <div class="service-features">
               <div class="feature-item">
@@ -182,8 +194,8 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Registered Agent Services</h3>
-                  <p>Professional address and compliance monitoring</p>
+                  <h3 data-en="Registered Agent Services" data-es="Servicios de Agente Registrado">Registered Agent Services</h3>
+                  <p data-en="Professional address and compliance monitoring" data-es="Dirección profesional y monitoreo de cumplimiento">Professional address and compliance monitoring</p>
                 </div>
               </div>
               <div class="feature-item">
@@ -193,8 +205,8 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Annual Compliance</h3>
-                  <p>Simplified filing and deadline management</p>
+                  <h3 data-en="Annual Compliance" data-es="Cumplimiento Anual">Annual Compliance</h3>
+                  <p data-en="Simplified filing and deadline management" data-es="Presentación simplificada y gestión de plazos">Simplified filing and deadline management</p>
                 </div>
               </div>
               <div class="feature-item">
@@ -204,8 +216,8 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Business Dashboard</h3>
-                  <p>CRM, invoicing, and accounting tools</p>
+                  <h3 data-en="Business Dashboard" data-es="Panel de Negocio">Business Dashboard</h3>
+                  <p data-en="CRM, invoicing, and accounting tools" data-es="Herramientas de CRM, facturación y contabilidad">CRM, invoicing, and accounting tools</p>
                 </div>
               </div>
               <div class="feature-item">
@@ -215,8 +227,8 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Free Business Banking</h3>
-                  <p>No minimum balance, up to 1% APY</p>
+                  <h3 data-en="Free Business Banking" data-es="Banca Empresarial Gratuita">Free Business Banking</h3>
+                  <p data-en="No minimum balance, up to 1% APY" data-es="Sin saldo mínimo, hasta 1% APY">No minimum balance, up to 1% APY</p>
                 </div>
               </div>
               <div class="feature-item">
@@ -226,27 +238,25 @@
                   </svg>
                 </div>
                 <div class="feature-content">
-                  <h3>Document Templates</h3>
-                  <p>Free business and legal document library</p>
+                  <h3 data-en="Document Templates" data-es="Plantillas de Documentos">Document Templates</h3>
+                  <p data-en="Free business and legal document library" data-es="Biblioteca gratuita de documentos comerciales y legales">Free business and legal document library</p>
                 </div>
               </div>
             </div>
             <div class="service-cta">
-              <a href="https://tartoro.d3e.studio/business-setup" class="cta-button pulse">Simplify Your Business with Tartoro</a>
+              <a href="https://tartoro.d3e.studio/business-setup" class="cta-button pulse" data-en="Simplify Your Business with Tartoro" data-es="Simplifica tu Negocio con Tartoro">Simplify Your Business with Tartoro</a>
             </div>
           </div>
         </div>
       </div>
  </div>
 
-
-
 <!-- how it works -->
 <section class="how-it-works-section" id="howitworks">
     <div class="section-header">
-        <p class="section-label">Our Steps</p>
-        <h1 class="section-title">How it Works</h1>
-        <p class="section-subtitle">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
+        <p class="section-label" data-en="Our Steps" data-es="Nuestros Pasos">Our Steps</p>
+        <h1 class="section-title" data-en="How it Works" data-es="Cómo Funciona">How it Works</h1>
+        <p class="section-subtitle" data-en="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form." data-es="Seguimos un proceso simple y claro para hacer que tu experiencia de creación de LLC sea lo más fácil posible.">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
     </div>
     
     <div class="timeline-container">
@@ -260,8 +270,8 @@
                         <i class="fas fa-file-lines"></i>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Provide Business Details</h3>
-                        <p class="step-description">Fill out a simple form with your business information</p>
+                        <h3 class="step-title" data-en="Provide Business Details" data-es="Proporciona Detalles del Negocio">Provide Business Details</h3>
+                        <p class="step-description" data-en="Fill out a simple form with your business information" data-es="Completa un formulario simple con la información de tu negocio">Fill out a simple form with your business information</p>
                     </div>
                 </div>
             </div>
@@ -279,8 +289,8 @@
                         <i class="fas fa-list-check"></i>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Choose Your Plan</h3>
-                        <p class="step-description">Select the Service Package that fits your needs</p>
+                        <h3 class="step-title" data-en="Choose Your Plan" data-es="Elige tu Plan">Choose Your Plan</h3>
+                        <p class="step-description" data-en="Select the Service Package that fits your needs" data-es="Selecciona el paquete de servicios que se adapte a tus necesidades">Select the Service Package that fits your needs</p>
                     </div>
                 </div>
             </div>
@@ -294,8 +304,8 @@
                         <i class="fas fa-building"></i>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Register Your LLC</h3>
-                        <p class="step-description">We handle all state filings and Documentation</p>
+                        <h3 class="step-title" data-en="Register Your LLC" data-es="Registra tu LLC">Register Your LLC</h3>
+                        <p class="step-description" data-en="We handle all state filings and Documentation" data-es="Nosotros manejamos todos los trámites estatales y documentación">We handle all state filings and Documentation</p>
                     </div>
                 </div>
             </div>
@@ -313,8 +323,8 @@
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Register Agent</h3>
-                        <p class="step-description">We handle all state filings and Documentation</p>
+                        <h3 class="step-title" data-en="Register Agent" data-es="Registrar Agente">Register Agent</h3>
+                        <p class="step-description" data-en="We handle all state filings and Documentation" data-es="Manejamos todos los trámites estatales y documentación">We handle all state filings and Documentation</p>
                     </div>
                 </div>
             </div>
@@ -328,8 +338,8 @@
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Complete Setup</h3>
-                        <p class="step-description">Get your EIN and Complete Compliance Filings</p>
+                        <h3 class="step-title" data-en="Complete Setup" data-es="Completar Configuración">Complete Setup</h3>
+                        <p class="step-description" data-en="Get your EIN and Complete Compliance Filings" data-es="Obtén tu EIN y completa los trámites de cumplimiento">Get your EIN and Complete Compliance Filings</p>
                     </div>
                 </div>
             </div>
@@ -347,8 +357,8 @@
                         <i class="fas fa-th-large"></i>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Access Dashboard</h3>
-                        <p class="step-description">Manage your business from our intuitive Platform</p>
+                        <h3 class="step-title" data-en="Access Dashboard" data-es="Acceder al Panel">Access Dashboard</h3>
+                        <p class="step-description" data-en="Manage your business from our intuitive Platform" data-es="Administra tu negocio desde nuestra plataforma intuitiva">Manage your business from our intuitive Platform</p>
                     </div>
                 </div>
             </div>
@@ -360,8 +370,8 @@
 <div class="whychoosetartoro" id="whytartoro">
     <div class="container">
         <div class="header">
-            <h1 class="section-title">Why Choose Tartoro?</h1>
-            <p class="section-subtitle">Starting a business should be exciting, not overwhelming. Tartoro makes it simple by handling the details, so you can focus on what matters.</p>
+            <h1 class="section-title" data-en="Why Choose Tartoro?" data-es="¿Por qué Elegir Tartoro?">Why Choose Tartoro?</h1>
+            <p class="section-subtitle" data-en="Starting a business should be exciting, not overwhelming. Tartoro makes it simple by handling the details, so you can focus on what matters." data-es="Iniciar un negocio debe ser emocionante, no abrumador. Tartoro lo hace simple manejando los detalles, para que puedas enfocarte en lo que importa.">Starting a business should be exciting, not overwhelming. Tartoro makes it simple by handling the details, so you can focus on what matters.</p>
         </div>
 
         <div class="features">
@@ -369,48 +379,48 @@
                 <div class="feature-icon green">
                     <i class="fas fa-file-signature"></i>
                 </div>
-                <h3>End-to-End Formation</h3>
-                <p>From LLC registration to EIN acquisition, we handle the paperwork so you can focus on your business.</p>
+                <h3 data-en="End-to-End Formation" data-es="Formación Integral">End-to-End Formation</h3>
+                <p data-en="From LLC registration to EIN acquisition, we handle the paperwork so you can focus on your business." data-es="Desde el registro de LLC hasta la adquisición de EIN, manejamos el papeleo para que puedas enfocarte en tu negocio.">From LLC registration to EIN acquisition, we handle the paperwork so you can focus on your business.</p>
             </div>
 
             <div class="feature">
                 <div class="feature-icon blue">
                     <i class="fas fa-globe-americas"></i>
                 </div>
-                <h3>Spanish Language Support</h3>
-                <p>Built for Spanish-speaking entrepreneurs, but easy to use for anyone—so language is never a barrier to success.</p>
+                <h3 data-en="Spanish Language Support" data-es="Soporte en Español">Spanish Language Support</h3>
+                <p data-en="Built for Spanish-speaking entrepreneurs, but easy to use for anyone—so language is never a barrier to success." data-es="Diseñado para emprendedores de habla hispana, pero fácil de usar para cualquiera—para que el idioma nunca sea una barrera al éxito.">Built for Spanish-speaking entrepreneurs, but easy to use for anyone—so language is never a barrier to success.</p>
             </div>
 
             <div class="feature">
                 <div class="feature-icon purple">
                     <i class="fas fa-credit-card"></i>
                 </div>
-                <h3>Gold Card Access</h3>
-                <p>Get your bank account, business, personal, we have what you need in one spot, and we make it easy.</p>
+                <h3 data-en="Gold Card Access" data-es="Acceso a Tarjeta Dorada">Gold Card Access</h3>
+                <p data-en="Get your bank account, business, personal, we have what you need in one spot, and we make it easy." data-es="Obtén tu cuenta bancaria, empresarial, personal, tenemos lo que necesitas en un solo lugar, y lo hacemos fácil.">Get your bank account, business, personal, we have what you need in one spot, and we make it easy.</p>
             </div>
 
             <div class="feature">
                 <div class="feature-icon orange">
                     <i class="fas fa-briefcase"></i>
                 </div>
-                <h3>Business Management</h3>
-                <p>Easy LLC setup, secure document management, and timely compliance alerts.</p>
+                <h3 data-en="Business Management" data-es="Gestión Empresarial">Business Management</h3>
+                <p data-en="Easy LLC setup, secure document management, and timely compliance alerts." data-es="Configuración fácil de LLC, gestión segura de documentos y alertas oportunas de cumplimiento.">Easy LLC setup, secure document management, and timely compliance alerts.</p>
             </div>
 
             <div class="feature">
                 <div class="feature-icon blue">
                     <i class="fas fa-building"></i>
                 </div>
-                <h3>Virtual Office Services</h3>
-                <p>Reduce costs with our comprehensive virtual office solution including private address.</p>
+                <h3 data-en="Virtual Office Services" data-es="Servicios de Oficina Virtual">Virtual Office Services</h3>
+                <p data-en="Reduce costs with our comprehensive virtual office solution including private address." data-es="Reduce costos con nuestra solución integral de oficina virtual que incluye dirección privada.">Reduce costs with our comprehensive virtual office solution including private address.</p>
             </div>
 
             <div class="feature">
                 <div class="feature-icon pink">
                     <i class="fas fa-headset"></i>
                 </div>
-                <h3>Professional Support</h3>
-                <p>Professional call answering and scheduling services to enhance your business presence.</p>
+                <h3 data-en="Professional Support" data-es="Soporte Profesional">Professional Support</h3>
+                <p data-en="Professional call answering and scheduling services to enhance your business presence." data-es="Servicios profesionales de respuesta telefónica y programación para mejorar tu presencia empresarial.">Professional call answering and scheduling services to enhance your business presence.</p>
             </div>
         </div>
     </div>
@@ -422,18 +432,18 @@
 <div class="pricing" id="pricing">
     <div class="container">
         <div class="section-header">
-            <p class="section-label">Pricing Table</p>
-            <h1 class="section-title">Simple, Transparent Pricing</h1>
-            <p class="section-subtitle">Choose the plan that works for you</p>
+            <p class="section-label" data-en="Pricing Table" data-es="Tabla de Precios">Pricing Table</p>
+            <h1 class="section-title" data-en="Simple, Transparent Pricing" data-es="Precios Simples y Transparentes">Simple, Transparent Pricing</h1>
+            <p class="section-subtitle" data-en="Choose the plan that works for you" data-es="Elige el plan que funcione para ti">Choose the plan that works for you</p>
         </div>
         
         <div class="pricing-grid">
             <!-- Basic Plan -->
             <div class="pricing-card">
                 <div class="dots-pattern"></div>
-                <p class="plan-label">Basic</p>
-                <h2 class="price">Free</h2>
-                <span class="price-period">+state Fees</span>
+                <p class="plan-label" data-en="Basic" data-es="Básico">Basic</p>
+                <h2 class="price" data-en="Free" data-es="Gratis">Free</h2>
+                <span class="price-period" data-en="+state Fees" data-es="+Tarifas Estatales">+state Fees</span>
                 
                 <div class="separator"></div>
                 
@@ -441,49 +451,49 @@
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">LLC Registration</p>
-                            <p class="feature-description">Standard processing time</p>
+                            <p class="feature-title1" data-en="LLC Registration" data-es="Registro de LLC">LLC Registration</p>
+                            <p class="feature-description" data-en="Standard processing time" data-es="Tiempo de procesamiento estándar">Standard processing time</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">FEIN (EIN) Setup</p>
-                            <p class="feature-description">Federal Tax ID registration</p>
+                            <p class="feature-title1" data-en="FEIN (EIN) Setup" data-es="Configuración FEIN (EIN)">FEIN (EIN) Setup</p>
+                            <p class="feature-description" data-en="Federal Tax ID registration" data-es="Registro de ID de impuestos federales">Federal Tax ID registration</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Business Banking Setup</p>
-                            <p class="feature-description">Basic account assistance</p>
+                            <p class="feature-title1" data-en="Business Banking Setup" data-es="Configuración de Banca Empresarial">Business Banking Setup</p>
+                            <p class="feature-description" data-en="Basic account assistance" data-es="Asistencia básica de cuenta">Basic account assistance</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Basic CRM Dashboard</p>
-                            <p class="feature-description">Essential business tools</p>
+                            <p class="feature-title1" data-en="Basic CRM Dashboard" data-es="Panel CRM Básico">Basic CRM Dashboard</p>
+                            <p class="feature-description" data-en="Essential business tools" data-es="Herramientas empresariales esenciales">Essential business tools</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Email Support</p>
-                            <p class="feature-description">48-hour response time</p>
+                            <p class="feature-title1" data-en="Email Support" data-es="Soporte por Email">Email Support</p>
+                            <p class="feature-description" data-en="48-hour response time" data-es="Tiempo de respuesta de 48 horas">48-hour response time</p>
                         </div>
                     </li>
                 </ul>
                 
-                <a href="https://tartoro.d3e.studio/business-setup" class="btn btn-outline">Start Free</a>
+                <a href="https://tartoro.d3e.studio/business-setup" class="btn btn-outline" data-en="Start Free" data-es="Comenzar Gratis">Start Free</a>
             </div>
             
             <!-- Platinum Plan -->
             <div class="pricing-card">
                 <div class="dots-pattern"></div>
-                <p class="plan-label">Platinum</p>
+                <p class="plan-label" data-en="Platinum" data-es="Platino">Platinum</p>
                 <h2 class="price">$49</h2>
-                <span class="price-period">/ month + annual fees</span>
+                <span class="price-period" data-en="/ month + annual fees" data-es="/ mes + tarifas anuales">/ month + annual fees</span>
                 
                 <div class="separator"></div>
                 
@@ -491,56 +501,56 @@
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Priority Filing</p>
-                            <p class="feature-description">Get your business registered faster with expedited processing</p>
+                            <p class="feature-title1" data-en="Priority Filing" data-es="Archivo Prioritario">Priority Filing</p>
+                            <p class="feature-description" data-en="Get your business registered faster with expedited processing" data-es="Registra tu negocio más rápido con procesamiento acelerado">Get your business registered faster with expedited processing</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Permanent Registered Agent</p>
-                            <p class="feature-description">Lifetime professional representation for your business</p>
+                            <p class="feature-title1" data-en="Permanent Registered Agent" data-es="Agente Registrado Permanente">Permanent Registered Agent</p>
+                            <p class="feature-description" data-en="Lifetime professional representation for your business" data-es="Representación profesional de por vida para tu negocio">Lifetime professional representation for your business</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Premium Compliance Alerts</p>
-                            <p class="feature-description">Real-time notifications for deadlines and requirements</p>
+                            <p class="feature-title1" data-en="Premium Compliance Alerts" data-es="Alertas de Cumplimiento Premium">Premium Compliance Alerts</p>
+                            <p class="feature-description" data-en="Real-time notifications for deadlines and requirements" data-es="Notificaciones en tiempo real para fechas límite y requisitos">Real-time notifications for deadlines and requirements</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Full Accounting Suite</p>
-                            <p class="feature-description">Complete financial management with tax preparation</p>
+                            <p class="feature-title1" data-en="Full Accounting Suite" data-es="Suite Completa de Contabilidad">Full Accounting Suite</p>
+                            <p class="feature-description" data-en="Complete financial management with tax preparation" data-es="Gestión financiera completa con preparación de impuestos">Complete financial management with tax preparation</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Premium Dashboard Access</p>
-                            <p class="feature-description">Advanced analytics, reporting, and business insights</p>
+                            <p class="feature-title1" data-en="Premium Dashboard Access" data-es="Acceso al Panel Premium">Premium Dashboard Access</p>
+                            <p class="feature-description" data-en="Advanced analytics, reporting, and business insights" data-es="Análisis avanzado, informes e insights empresariales">Advanced analytics, reporting, and business insights</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Legal Document Templates</p>
-                            <p class="feature-description">Access to customizable business contracts and forms</p>
+                            <p class="feature-title1" data-en="Legal Document Templates" data-es="Plantillas de Documentos Legales">Legal Document Templates</p>
+                            <p class="feature-description" data-en="Access to customizable business contracts and forms" data-es="Acceso a contratos y formularios empresariales personalizables">Access to customizable business contracts and forms</p>
                         </div>
                     </li>
                 </ul>
                 
-                <a href="https://tartoro.d3e.studio/business-setup" class="btn btn-primary">Start Now</a>
+                <a href="https://tartoro.d3e.studio/business-setup" class="btn btn-primary" data-en="Start Now" data-es="Comenzar Ahora">Start Now</a>
             </div>
             
             <!-- Standard Plan -->
             <div class="pricing-card">
                 <div class="dots-pattern"></div>
-                <p class="plan-label">Standard</p>
+                <p class="plan-label" data-en="Standard" data-es="Estándar">Standard</p>
                 <h2 class="price">$199</h2>
-                <span class="price-period">/year</span>
+                <span class="price-period" data-en="/year" data-es="/año">/year</span>
                 
                 <div class="separator"></div>
                 
@@ -548,57 +558,58 @@
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Fast Filing</p>
-                            <p class="feature-description">Efficient business registration within 3-5 days</p>
+                            <p class="feature-title1" data-en="Fast Filing" data-es="Archivo Rápido">Fast Filing</p>
+                            <p class="feature-description" data-en="Efficient business registration within 3-5 days" data-es="Registro empresarial eficiente en 3-5 días">Efficient business registration within 3-5 days</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Registered Agent (1 Year)</p>
-                            <p class="feature-description">Professional representation with annual renewal option</p>
+                            <p class="feature-title1" data-en="Registered Agent (1 Year)" data-es="Agente Registrado (1 Año)">Registered Agent (1 Year)</p>
+                            <p class="feature-description" data-en="Professional representation with annual renewal option" data-es="Representación profesional con opción de renovación anual">Professional representation with annual renewal option</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Document Management</p>
-                            <p class="feature-description">Advanced storage and organization features</p>
+                            <p class="feature-title1" data-en="Document Management" data-es="Gestión de Documentos">Document Management</p>
+                            <p class="feature-description" data-en="Advanced storage and organization features" data-es="Funciones avanzadas de almacenamiento y organización">Advanced storage and organization features</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Basic Accounting Tools</p>
-                            <p class="feature-description">Essential bookkeeping and expense tracking</p>
+                            <p class="feature-title1" data-en="Basic Accounting Tools" data-es="Herramientas Básicas de Contabilidad">Basic Accounting Tools</p>
+                            <p class="feature-description" data-en="Essential bookkeeping and expense tracking" data-es="Contabilidad esencial y seguimiento de gastos">Essential bookkeeping and expense tracking</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Advanced Dashboard</p>
-                            <p class="feature-description">Enhanced business monitoring tools</p>
+                            <p class="feature-title1" data-en="Advanced Dashboard" data-es="Panel Avanzado">Advanced Dashboard</p>
+                            <p class="feature-description" data-en="Enhanced business monitoring tools" data-es="Herramientas mejoradas de monitoreo empresarial">Enhanced business monitoring tools</p>
                         </div>
                     </li>
                     <li class="feature-item">
                         <span class="feature-icon">✓</span>
                         <div>
-                            <p class="feature-title1">Email & Phone Support</p>
-                            <p class="feature-description">Business hours support with fast response times</p>
+                            <p class="feature-title1" data-en="Email & Phone Support" data-es="Soporte por Email y Teléfono">Email & Phone Support</p>
+                            <p class="feature-description" data-en="Business hours support with fast response times" data-es="Soporte en horario comercial con tiempos de respuesta rápidos">Business hours support with fast response times</p>
                         </div>
                     </li>
                 </ul>
                 
-                <a href="https://tartoro.d3e.studio/business-setup" class="btn btn-outline">Start Now</a>
+                <a href="https://tartoro.d3e.studio/business-setup" class="btn btn-outline" data-en="Start Now" data-es="Comenzar Ahora">Start Now</a>
             </div>
         </div>
     </div>
 </div>
-<!-- heloful guides css -->
+
+<!-- helpful guides css -->
 <div class="helpful guides" id="helpgulguides">
     <div class="container">
         <div class="header">
-            <h1 class="section-title">Helpful Guides</h1>
+            <h1 class="section-title" data-en="Helpful Guides" data-es="Guías Útiles">Helpful Guides</h1>
         </div>
         
         <div class="guides-container">
@@ -607,9 +618,9 @@
                     <div class="icon">📊</div>
                 </div>
                 <div class="card-body">
-                    <h3>Business Financial Calculator</h3>
-                    <p>Access tools to help you make informed financial decisions for your business including profit margins, ROI, and break-even analysis.</p>
-                    <a href="#" class="learn-more">Learn more <span class="arrow">→</span></a>
+                    <h3 data-en="Business Financial Calculator" data-es="Calculadora Financiera Empresarial">Business Financial Calculator</h3>
+                    <p data-en="Access tools to help you make informed financial decisions for your business including profit margins, ROI, and break-even analysis." data-es="Accede a herramientas que te ayuden a tomar decisiones financieras informadas para tu negocio, incluyendo márgenes de ganancia, ROI y análisis de punto de equilibrio.">Access tools to help you make informed financial decisions for your business including profit margins, ROI, and break-even analysis.</p>
+                    <a href="#" class="learn-more" data-en="Learn more" data-es="Aprende más">Learn more <span class="arrow">→</span></a>
                 </div>
             </div>
             
@@ -618,9 +629,9 @@
                     <div class="icon">📄</div>
                 </div>
                 <div class="card-body">
-                    <h3>LLC vs Sole Proprietorship Guide</h3>
-                    <p>Compare the advantages and disadvantages of different business structures to find the best fit for your entrepreneurial journey.</p>
-                    <a href="#" class="learn-more">Learn more <span class="arrow">→</span></a>
+                    <h3 data-en="LLC vs Sole Proprietorship Guide" data-es="Guía LLC vs Propietario Único">LLC vs Sole Proprietorship Guide</h3>
+                    <p data-en="Compare the advantages and disadvantages of different business structures to find the best fit for your entrepreneurial journey." data-es="Compara las ventajas y desventajas de diferentes estructuras empresariales para encontrar la mejor opción para tu viaje emprendedor.">Compare the advantages and disadvantages of different business structures to find the best fit for your entrepreneurial journey.</p>
+                    <a href="#" class="learn-more" data-en="Learn more" data-es="Aprende más">Learn more <span class="arrow">→</span></a>
                 </div>
             </div>
             
@@ -629,9 +640,9 @@
                     <div class="icon">📈</div>
                 </div>
                 <div class="card-body">
-                    <h3>State-by-State LLC Formation Guide</h3>
-                    <p>Discover the specific requirements, fees, and processes for forming an LLC in different states across the country.</p>
-                    <a href="#" class="learn-more">Learn more <span class="arrow">→</span></a>
+                    <h3 data-en="State-by-State LLC Formation Guide" data-es="Guía de Formación de LLC por Estado">State-by-State LLC Formation Guide</h3>
+                    <p data-en="Discover the specific requirements, fees, and processes for forming an LLC in different states across the country." data-es="Descubre los requisitos específicos, tarifas y procesos para formar una LLC en diferentes estados del país.">Discover the specific requirements, fees, and processes for forming an LLC in different states across the country.</p>
+                    <a href="#" class="learn-more" data-en="Learn more" data-es="Aprende más">Learn more <span class="arrow">→</span></a>
                 </div>
             </div>
         </div>
@@ -644,7 +655,7 @@
     
     <div class="footer-company">
         <h2>Tartoro</h2>
-        <p>Making Business formation simple <br>and accessible for every one.</p>
+        <p data-en="Making Business formation simple and accessible for every one." data-es="Haciendo la formación empresarial simple y accesible para todos.">Making Business formation simple <br>and accessible for every one.</p>
         <div class="phone">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -654,33 +665,33 @@
     </div>
     
     <div class="footer-links">
-        <h3>Quick Links</h3>
+        <h3 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h3>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" data-en="Home" data-es="Inicio">Home</a></li>
+            <li><a href="#" data-en="About" data-es="Acerca de">About</a></li>
+            <li><a href="#" data-en="Services" data-es="Servicios">Services</a></li>
+            <li><a href="#" data-en="Contact Us" data-es="Contáctanos">Contact Us</a></li>
         </ul>
     </div>
     
     <div class="footer-links">
-        <h3>Legal</h3>
+        <h3 data-en="Legal" data-es="Legal">Legal</h3>
         <ul>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a></li>
+            <li><a href="#" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a></li>
         </ul>
     </div>
     
     <div class="footer-links">
-        <h3>Contact</h3>
+        <h3 data-en="Contact" data-es="Contacto">Contact</h3>
         <ul>
             <li><a href="#">support@tartoro.com</a></li>
-            <li><a href="#">Live Chat</a></li>
+            <li><a href="#" data-en="Live Chat" data-es="Chat en Vivo">Live Chat</a></li>
         </ul>
     </div>
     
     <div class="footer-social">
-        <h3>Follow Us On</h3>
+        <h3 data-en="Follow Us On" data-es="Síguenos En">Follow Us On</h3>
         <div class="social-icons">
             <div class="social-icon facebook">
                 <a href="#" aria-label="Facebook">
@@ -719,21 +730,32 @@
                 <li><a href="#">© 2025 Tartoro.</a></li>
             </ul>
         </div>
-      
     </div>
 </footer>
 
-
 <script>
-    function changeLanguage(lang) {
-      if (lang === 'en') {
-        document.getElementById('selected-language').textContent = 'English';
-      } else if (lang === 'es') {
-        document.getElementById('selected-language').textContent = 'Español';
-        // Here you would add code to actually translate the page
-        // This could connect to Google Translate API or your own translation system
-      }
-    }
-  </script>
+let currentLanguage = 'en';
+
+function switchLanguage(lang) {
+    currentLanguage = lang;
+    // Update all elements with data attributes
+    const elements = document.querySelectorAll('[data-en][data-es]');
+    elements.forEach(element => {
+        const text = element.getAttribute(`data-${lang}`);
+        if (text) {
+            // Check if element is a link with nested spans
+            if (element.classList.contains('learn-more')) {
+                element.innerHTML = text + ' <span class="arrow">→</span>';
+            } else {
+                element.textContent = text;
+            }
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    switchLanguage('en');
+});
+</script>
 </body>
 </html>
